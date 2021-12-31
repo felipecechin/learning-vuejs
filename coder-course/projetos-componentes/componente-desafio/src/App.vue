@@ -1,11 +1,9 @@
 <template>
     <v-app>
-        <app-navigation/>
-
-        <app-bar/>
-
-        <app-content/>
-        <app-footer/>
+        <Navigation/>
+        <AppBar/>
+        <Content/>
+        <Footer/>
     </v-app>
 </template>
 
@@ -17,10 +15,10 @@
 
     export default {
         components: {
-            appNavigation: Navigation,
-            appBar: AppBar,
-            appContent: Content,
-            appFooter: Footer
+            Navigation,
+            AppBar,
+            Content,
+            Footer
         }
     }
 </script>
