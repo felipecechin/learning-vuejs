@@ -15,7 +15,7 @@
         methods: {
             alterarIdade() {
                 this.idade = 33
-                barramento.$emit('idadeMudou', this.idade)
+                barramento.alterarIdade(this.idade)
             }
         }
     }
