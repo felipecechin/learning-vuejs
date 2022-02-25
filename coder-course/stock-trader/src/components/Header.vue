@@ -7,7 +7,7 @@
         <v-toolbar-items>
             <v-btn flat to="/">Início</v-btn>
             <v-btn flat to="/portfolio">Portfólio</v-btn>
-            <v-btn falt to="/stocks">Ações</v-btn>
+            <v-btn flat to="/stocks">Ações</v-btn>
         </v-toolbar-items>
 
         <v-spacer></v-spacer>
@@ -25,13 +25,23 @@
                     </v-list-tile>
                 </v-list>
             </v-menu>
+            <v-layout align-center>
+                <span class="text-uppercase grey--text text--darken-2">
+                    Saldo: {{ funds }}
+                </span>
+            </v-layout>
         </v-toolbar-items>
     </v-toolbar>
 </template>
 
 <script>
     export default {
-        name: "Header"
+        name: "Header",
+        computed: {
+            funds() {
+                return this.$store.getters.funds
+            }
+        }
     }
 </script>
 
